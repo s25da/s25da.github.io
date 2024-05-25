@@ -60,7 +60,6 @@
         <p>hej vad vil du ha hjelp med</p>
         <div class="binary-code">
             <p></p>
-            <p>01010110 01100101 01101101 00100000 01110110 01100001 01101110 01101110 00100000 01110011 01100101 01101110 01100001 01110011 01110100 01100101 00100000 01110110 01100101 01110010 01101100 01100100 01110011 01101011 01110101 01110000 01110000 01100101 01101110 00100000 01101001 00100000 01100110 01101111 01110100 01100010 01101111 01101100 01101100 00111111</p>
         </div>
         <div class="translator">
             <textarea id="binaryInput" placeholder="Ange binärkoden här"></textarea>
@@ -71,11 +70,11 @@
             <input type="text" id="answer" placeholder="Skriv in svaret här (Argentina)">
             <button onclick="checkAnswer()">kontrollera</button>
         </div>
-       <div id="next-page-link" style="display: none;">
-    <div class="next-page-link">
-        <a href="fifthpage.html">Sista?? :O</a>
-    </div>
-    </div>   
+        <div id="next-page-link" style="display: none;">
+            <div class="next-page-link">
+                <a href="fifthpage.html">Sista?? :O</a>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -95,21 +94,13 @@
 
         function checkAnswer() {
             const answer = document.getElementById('answer').value.trim().toLowerCase();
-            if (answer === 'argentina') {
+            if (answer === 'Argentina') {
                 alert('Rätt svar!');
+                document.getElementById('next-page-link').style.display = 'block'; // Show the link
             } else {
                 alert('Fel svar, försök igen.');
             }
         }
     </script>
-        function checkAnswer() {
-    const answer = document.getElementById('answer').value.trim().toLowerCase();
-    if (answer === 'Argentina') {
-        alert('Rätt svar!');
-        document.getElementById('next-page-link').style.display = 'block'; // Show the link
-    } else {
-        alert('Fel svar, försök igen.');
-    }
-}
 </body>
 </html>
