@@ -65,7 +65,7 @@
         </div>
         <div class="output" id="translation"></div>
         <div class="answer-input">
-            <input type="text" id="answer" placeholder="Skriv in svaret här (Argentina)">
+            <input type="text" id="answer" placeholder="Skriv in svaret här">
             <button onclick="checkAnswer()">kontrollera</button>
         </div>
         <div id="next-page-link" style="display: none;">
@@ -93,15 +93,15 @@
     </script>
 
     <script>
-        function checkAnswer() {
-            const answer = document.getElementById('answer').value.trim().toLowerCase();
-            if (answer === 'argentina') {
-                alert('Rätt svar!');
-                document.getElementById('next-page-link').style.display = 'block'; // Show the link
-            } else {
-                alert('Fel svar, försök igen.');
-            }
-        }
+    function checkAnswer() {
+    const answer = document.getElementById('answer').value.trim(); // Removed .toLowerCase()
+    if (answer.toLowerCase() === 'argentina') { // Changed toLowerCase() here
+        alert('Rätt svar!');
+        document.getElementById('next-page-link').style.display = 'block'; // Show the link
+    } else {
+        alert('Fel svar, försök igen.');
+    }
+}
     </script>
 </body>
 </html>
