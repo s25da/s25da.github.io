@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find the Right Horse</title>
+    <title>Hitta Rätt Häst!</title>
     <link rel="stylesheet" href="windows95.css">
     <style>
         .horse-images {
@@ -31,22 +31,23 @@
 <body>
     <div class="windows95-container-chaos">
         <div class="windows95-title-bar">
-            <span class="windows95-title">Find the Right Horse</span>
-            <button class="windows95-close-btn" onclick="goBack()">Back</button>
+            <span class="windows95-title">Hitta Rätt Häst</span>
+            <button class="windows95-close-btn" onclick="goBack()">Tillbaka</button>
         </div>
         <div class="windows95-content-chaos">
             <div class="horse-images">
                 <div class="horse-image" onclick="showResult(true)">
-                    <img src="correct_horse.jpg" alt="Correct Horse">
+                    <img src="https://cdn.pixabay.com/photo/2016/07/24/06/55/seahorse-1538013_960_720.jpg" alt="Rätt Häst">
                 </div>
                 <div class="horse-image" onclick="showResult(false)">
-                    <img src="horse1.jpg" alt="Horse 1">
+                    <img src="https://th.bing.com/th/id/R.b5ccf29ce6bba7f11c36cc4c400d2668?rik=lpfQ1xFdHEkuiw&pid=ImgRaw&r=0" alt="Häst">
                 </div>
                 <div class="horse-image" onclick="showResult(false)">
-                    <img src="horse2.jpg" alt="Horse 2">
+                    <img src="https://tauchen.de/content/uploads/2015/05/xl_257749-c-davis-fleetham-wwf.jpg" alt="Häst">
                 </div>
                 <!-- Add more horse images here -->
             </div>
+            <p>Klicka på rätt häst.</p>
         </div>
     </div>
     <script>
@@ -56,10 +57,10 @@
 
         function showResult(isCorrect) {
             if (isCorrect) {
-                alert('Congratulations! You found the right horse!');
-                // Redirect to a new page or perform any other action
+                alert('Bra jobbat!');
+                window.location.href = 'fourthpage.html'; // Redirect to the fourth page
             } else {
-                alert('Try again! This is not the right horse.');
+                alert('NEEEIGHHH, försök igen!');
             }
         }
     </script>
