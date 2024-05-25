@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question and Password Check</title>
+    <title>STOP STOP!!! KONTROLL</title>
     <link rel="stylesheet" href="windows95.css">
 </head>
 <body>
     <div class="windows95-container">
         <div class="windows95-title-bar">
-            <span class="windows95-title">Question</span>
+            <span class="windows95-title">Innan du får fortsätta måste vi kontrollera ditt ID.</span>
             <button class="windows95-close-btn" onclick="closePopup()">X</button>
         </div>
         <div class="windows95-content">
-            <p>What is 2 + 1?</p>
+            <p>Vad heter du?</p>
             <form id="question-form">
-                <label for="answer">Answer:</label>
+                <label for="answer">Svar:</label>
                 <input type="text" id="answer" name="answer" required>
-                <button type="submit">Submit</button>
+                <button type="submit">Skicka in svar!</button>
             </form>
             <div id="continue" class="windows95-popup">
-                <p>Correct! Click the link below to continue.</p>
-                <a href="nextpage.html">Continue</a>
+                <p>Rätt! Klicka på länken för att fortsätta.</p>
+                <a href="nextpage.html">Fortsätt</a>
             </div>
         </div>
     </div>
@@ -33,11 +33,11 @@
             event.preventDefault();
             const answer = document.getElementById('answer').value.toLowerCase();
             
-            if (answer === '3' || answer === 'three') {
+            if (answer === '3' || answer === 'Syda') {
                 document.getElementById('question-form').style.display = 'none';
                 document.getElementById('continue').style.display = 'block';
             } else {
-                alert('Incorrect answer. Try again.');
+                alert('Fel. Försök igen!');
             }
         });
     </script>
