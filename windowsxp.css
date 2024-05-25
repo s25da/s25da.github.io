@@ -1,0 +1,73 @@
+/* windowsxp.css */
+
+body {
+    font-family: Tahoma, sans-serif;
+    background-color: #008080; /* Windows XP Teal background */
+}
+
+.container {
+    background: #ece9d8; /* Light beige for classic Windows XP window background */
+    border: 2px solid #000080; /* Dark blue border for window */
+    width: 400px;
+    padding: 20px;
+    border-radius: 6px; /* Slight rounding for window edges */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+    text-align: center;
+}
+
+h1 {
+    color: #000080; /* Dark blue for the heading */
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px #fff; /* Subtle text shadow for contrast */
+}
+
+p {
+    font-size: 18px;
+    color: #000;
+}
+
+label {
+    font-size: 16px;
+    color: #000;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px); /* Full width minus padding and border */
+    padding: 5px;
+    margin: 10px 0;
+    border: 1px solid #7f7f7f; /* Gray border */
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+button {
+    padding: 5px 15px;
+    background-color: #dcdcdc; /* Light gray button */
+    color: #000;
+    border: 1px solid #7f7f7f; /* Gray border */
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Button shadow */
+}
+
+button:hover {
+    background-color: #c0c0c0; /* Slightly darker on hover */
+}
+
+#continue {
+    display: none;
+    margin-top: 20px;
+}
+
+#continue a {
+    text-decoration: none;
+    color: #0000ff; /* Blue link color */
+    font-size: 18px;
+}
+
+#continue a:hover {
+    text-decoration: underline;
+}
