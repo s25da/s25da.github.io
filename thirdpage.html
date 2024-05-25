@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Right Horse</title>
+    <link rel="stylesheet" href="windows95.css">
+    <style>
+        .horse-images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .horse-image {
+            margin: 10px;
+            cursor: pointer;
+        }
+        .horse-image img {
+            width: 150px;
+            height: auto;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: border-color 0.3s ease;
+        }
+        .horse-image img:hover {
+            border-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="windows95-container-chaos">
+        <div class="windows95-title-bar">
+            <span class="windows95-title">Find the Right Horse</span>
+            <button class="windows95-close-btn" onclick="goBack()">Back</button>
+        </div>
+        <div class="windows95-content-chaos">
+            <div class="horse-images">
+                <div class="horse-image" onclick="showResult(true)">
+                    <img src="correct_horse.jpg" alt="Correct Horse">
+                </div>
+                <div class="horse-image" onclick="showResult(false)">
+                    <img src="horse1.jpg" alt="Horse 1">
+                </div>
+                <div class="horse-image" onclick="showResult(false)">
+                    <img src="horse2.jpg" alt="Horse 2">
+                </div>
+                <!-- Add more horse images here -->
+            </div>
+        </div>
+    </div>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function showResult(isCorrect) {
+            if (isCorrect) {
+                alert('Congratulations! You found the right horse!');
+                // Redirect to a new page or perform any other action
+            } else {
+                alert('Try again! This is not the right horse.');
+            }
+        }
+    </script>
+</body>
+</html>
