@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>beeop boop 1 0 1 0 ...</title>
+    <title>gogle</title>
     <link rel="stylesheet" href="windows95.css">
     <style>
         .container {
@@ -29,6 +29,12 @@
             width: 48%;
             height: 100px;
         }
+        input[type="text"] {
+            width: 48%;
+            height: 40px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
         button {
             width: 48%;
             height: 40px;
@@ -38,28 +44,37 @@
             margin-top: 20px;
             font-weight: bold;
         }
+        .next-page-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .next-page-link a {
+            text-decoration: none;
+            color: #007bff;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>gogle översätt</h2>
-        <p>ctrl c ctrl v koden</p>
+        <h2>ai gogle här!</h2>
+        <p>hej vad vil du ha hjelp med</p>
         <div class="binary-code">
-            <p>Binärkod:</p>
+            <p></p>
             <p>01010110 01100101 01101101 00100000 01110110 01100001 01101110 01101110 00100000 01110011 01100101 01101110 01100001 01110011 01110100 01100101 00100000 01110110 01100101 01110010 01101100 01100100 01110011 01101011 01110101 01110000 01110000 01100101 01101110 00100000 01101001 00100000 01100110 01101111 01110100 01100010 01101111 01101100 01101100 00111111</p>
         </div>
         <div class="translator">
-            <div class="next-page-link">
-    <a href="fifthpage.html">Sista sidan!</a>
-</div>
             <textarea id="binaryInput" placeholder="Ange binärkoden här"></textarea>
-            <button onclick="translateBinary()">gogle översätt koden!</button>
+            <button onclick="translateBinary()">gogle magic</button>
         </div>
         <div class="output" id="translation"></div>
         <div class="answer-input">
-    <input type="text" id="answer" placeholder="Skriv in svaret här (Argentina)">
-    <button onclick="checkAnswer()">kolla svaret</button>
-</div>
+            <input type="text" id="answer" placeholder="Skriv in svaret här (Argentina)">
+            <button onclick="checkAnswer()">kontrollera</button>
+        </div>
+       <div id="next-page-link" style="display: none;">
+    <div class="next-page-link">
+        <a href="fifthpage.html">Sista?? :O</a>
+    </div>
     </div>
 
     <script>
@@ -76,6 +91,24 @@
 
             document.getElementById('translation').textContent = translatedText;
         }
+
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            if (answer === 'argentina') {
+                alert('Rätt svar!');
+            } else {
+                alert('Fel svar, försök igen.');
+            }
+        }
     </script>
+        function checkAnswer() {
+    const answer = document.getElementById('answer').value.trim().toLowerCase();
+    if (answer === 'Argentina') {
+        alert('Rätt svar!');
+        document.getElementById('next-page-link').style.display = 'block'; // Show the link
+    } else {
+        alert('Fel svar, försök igen.');
+    }
+}
 </body>
 </html>
