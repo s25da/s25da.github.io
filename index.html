@@ -19,7 +19,7 @@
                 <input type="text" id="answer" name="answer" required>
                 <button type="submit">Skicka in svar!</button>
             </form>
-            <div id="continue" class="windows95-popup">
+            <div id="continue" class="windows95-popup" style="display: none;">
                 <p>Rätt! Klicka på länken för att fortsätta.</p>
                 <a href="nextpage.html">Fortsätt</a>
             </div>
@@ -33,7 +33,7 @@
             event.preventDefault();
             const answer = document.getElementById('answer').value.toLowerCase();
             
-            if (answer === 'Syda' || answer === 'Sylvia') {
+            if (answer === 'syda' || answer === 'sylvia') {
                 document.getElementById('question-form').style.display = 'none';
                 document.getElementById('continue').style.display = 'block';
             } else {
@@ -43,5 +43,3 @@
     </script>
 </body>
 </html>
-
-
