@@ -62,12 +62,12 @@
             <p></p>
         </div>
         <div class="translator">
-            <textarea id="binaryInput" placeholder="Ange binärkoden här"></textarea>
+            <textarea id="binaryInput" placeholder="kod plsr"></textarea>
             <button onclick="translateBinary()">gogle magic</button>
         </div>
         <div class="output" id="translation"></div>
         <div class="answer-input">
-            <input type="text" id="answer" placeholder="Skriv in svaret här (Argentina)">
+            <input type="text" id="answer" placeholder="Skriv in svaret här..">
             <button onclick="checkAnswer()">kontrollera</button>
         </div>
         <div id="next-page-link" style="display: none;">
@@ -80,3 +80,29 @@
     <script>
         function translateBinary() {
             const binaryInput = document.getElementById('binaryInput').value;
+            const binaryArray = binaryInput.split(' ');
+            let translatedText = '';
+
+            for (let i = 0; i < binaryArray.length; i++) {
+                const binaryChar = binaryArray[i];
+                const decimalValue = parseInt(binaryChar, 2);
+                translatedText += String.fromCharCode(decimalValue);
+            }
+
+            document.getElementById('translation').textContent = translatedText;
+        }
+    </script>
+
+    <script>
+        function checkAnswer() {
+            const answer = document.getElementById('answer').value.trim().toLowerCase();
+            if (answer === 'Argentina') {
+                alert('Rätt svar!');
+                document.getElementById('next-page-link').style.display = 'block'; // Show the link
+            } else {
+                alert('Fel svar... :(');
+            }
+        }
+    </script>
+</body>
+</html>
