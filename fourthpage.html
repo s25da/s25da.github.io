@@ -58,16 +58,14 @@
     <div class="container">
         <h2>ai gogle här!</h2>
         <p>hej vad vil du ha hjelp med</p>
-        <div class="binary-code">
-            <p></p>
-        </div>
+        <div class="binary-code" id="binary-code-output" style="display: none;"></div>
         <div class="translator">
-            <textarea id="binaryInput" placeholder="kod plsr"></textarea>
+            <textarea id="binaryInput" placeholder="kod pls"></textarea>
             <button onclick="translateBinary()">gogle magic</button>
         </div>
         <div class="output" id="translation"></div>
         <div class="answer-input">
-            <input type="text" id="answer" placeholder="Skriv in svaret här..">
+            <input type="text" id="answer" placeholder="Svar..">
             <button onclick="checkAnswer()">kontrollera</button>
         </div>
         <div id="next-page-link" style="display: none;">
@@ -89,18 +87,20 @@
                 translatedText += String.fromCharCode(decimalValue);
             }
 
-            document.getElementById('translation').textContent = translatedText;
+            const binaryCodeOutput = document.getElementById('binary-code-output');
+            binaryCodeOutput.textContent = translatedText;
+            binaryCodeOutput.style.display = 'block';
         }
     </script>
 
     <script>
         function checkAnswer() {
             const answer = document.getElementById('answer').value.trim().toLowerCase();
-            if (answer === 'Argentina') {
+            if (answer === 'argentina') {
                 alert('Rätt svar!');
                 document.getElementById('next-page-link').style.display = 'block'; // Show the link
             } else {
-                alert('Fel svar... :(');
+                alert('Fel svar....');
             }
         }
     </script>
