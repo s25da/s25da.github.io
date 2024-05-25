@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question and Password Check</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            text-align: center;
+            padding: 18px;
+        }
+        #continue {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Välkommen spelare Syda</h1>
+    <p>2+1?</p>
+    <form id="question-form">
+        <label for="answer">Svar:</label>
+        <input type="text" id="answer" name="answer" required>
+        <button type="submit">Svara</button>
+    </form>
+    <div id="continue">
+        <p>Rätt! Klicka på länken för att fortsätta.</p>
+        <a href="nextpage.html">Fortsätt</a>
+    </div>
+    <script>
+        document.getElementById('question-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const answer = document.getElementById('answer').value.toLowerCase();
+            
+            if (answer === 'tre') {
+                document.getElementById('question-form').style.display = 'none';
+                document.getElementById('continue').style.display = 'block';
+            } else {
+                alert('Fel svar. Prova igen.');
+            }
+        });
+    </script>
+</body>
+</html>
