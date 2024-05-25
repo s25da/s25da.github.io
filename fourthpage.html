@@ -80,27 +80,3 @@
     <script>
         function translateBinary() {
             const binaryInput = document.getElementById('binaryInput').value;
-            const binaryArray = binaryInput.split(' ');
-            let translatedText = '';
-
-            for (let i = 0; i < binaryArray.length; i++) {
-                const binaryChar = binaryArray[i];
-                const decimalValue = parseInt(binaryChar, 2);
-                translatedText += String.fromCharCode(decimalValue);
-            }
-
-            document.getElementById('translation').textContent = translatedText;
-        }
-
-        function checkAnswer() {
-            const answer = document.getElementById('answer').value.trim().toLowerCase();
-            if (answer === 'Argentina') {
-                alert('Rätt svar!');
-                document.getElementById('next-page-link').style.display = 'block'; // Show the link
-            } else {
-                alert('Fel svar, försök igen.');
-            }
-        }
-    </script>
-</body>
-</html>
