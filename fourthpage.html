@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>beeop boop 1 0 1 0 ...</title>
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .binary-code {
+            margin-top: 20px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+        .translator {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+        textarea {
+            width: 48%;
+            height: 100px;
+        }
+        button {
+            width: 48%;
+            height: 40px;
+            cursor: pointer;
+        }
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>gogle översätt</h2>
+        <p>ctrl c ctrl v koden</p>
+        <div class="binary-code">
+            <p>Binärkod:</p>
+            <p>01010110 01100101 01101101 00100000 01110110 01100001 01101110 01101110 00100000 01110011 01100101 01101110 01100001 01110011 01110100 01100101 00100000 01110110 011... (binär kod fortsätter)</p>
+        </div>
+        <div class="translator">
+            <textarea id="binaryInput" placeholder="Ange binärkoden här"></textarea>
+            <button onclick="translateBinary()">gogle översätt koden!</button>
+        </div>
+        <div class="output" id="translation"></div>
+    </div>
+
+    <script>
+        function translateBinary() {
+            const binaryInput = document.getElementById('binaryInput').value;
+            const binaryArray = binaryInput.split(' ');
+            let translatedText = '';
+
+            for (let i = 0; i < binaryArray.length; i++) {
+                const binaryChar = binaryArray[i];
+                const decimalValue = parseInt(binaryChar, 2);
+                translatedText += String.fromCharCode(decimalValue);
+            }
+
+            document.getElementById('translation').textContent = translatedText;
+        }
+    </script>
+</body>
+</html>
